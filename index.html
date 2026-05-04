@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -454,7 +455,7 @@
 <div id="deck">
 
 <!-- Slide 1: 封面 -->
-<section class="slide hero dark">
+<section class="slide hero dark" id="slide-0">
   <div class="chrome">
     <div>Vol.01 · 2026</div>
     <div>咖啡豆单</div>
@@ -476,12 +477,238 @@
     <div>— · —</div>
   </div>
 </section>
-<!-- Slide 2: 卡门瑰夏 -->
-<section class="slide light">
+<!-- Slide TOC: 目录 -->
+<section class="slide light" id="slide-toc">
   <div class="chrome">
-    <div>巴拿马 · Panama</div>
-    <div>01 / 26</div>
+    <div>在售咖啡豆单 · 目录</div>
+    <div>TOC</div>
   </div>
+  <div class="frame" style="display:flex; flex-direction:column; padding:1vh 0; overflow-y:auto">
+    <div style="font-family:var(--serif-zh); font-weight:700; font-size:2.8vw; margin-bottom:2vh; text-align:center; letter-spacing:.1em">
+      26支精选咖啡豆 · 按产地分类
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:1.5vh 3vw; flex:1; align-content:start">
+      <div style="border-top:1px solid rgba(42,30,19,.2); padding-top:1vh">
+        <div style="font-family:var(--mono); font-size:max(11px,.82vw); letter-spacing:.16em; text-transform:uppercase; opacity:.55; margin-bottom:.8vh">巴拿马 · Panama</div>
+        <div style="display:flex; flex-wrap:wrap; gap:.6vh .8vw">
+          <div onclick="go(2)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">01</span>
+            <span style="font-weight:500">卡门瑰夏</span>
+          </div>
+          <div onclick="go(14)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">13</span>
+            <span style="font-weight:500">巴拿马-马拉哥吉佩</span>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(42,30,19,.2); padding-top:1vh">
+        <div style="font-family:var(--mono); font-size:max(11px,.82vw); letter-spacing:.16em; text-transform:uppercase; opacity:.55; margin-bottom:.8vh">埃塞俄比亚 · Ethiopia</div>
+        <div style="display:flex; flex-wrap:wrap; gap:.6vh .8vw">
+          <div onclick="go(3)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">02</span>
+            <span style="font-weight:500">桃乐茜</span>
+          </div>
+          <div onclick="go(5)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">04</span>
+            <span style="font-weight:500">花魁</span>
+          </div>
+          <div onclick="go(10)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">09</span>
+            <span style="font-weight:500">柑橘茉莉</span>
+          </div>
+          <div onclick="go(16)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">15</span>
+            <span style="font-weight:500">瑰夏村</span>
+          </div>
+          <div onclick="go(18)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">17</span>
+            <span style="font-weight:500">神秘农场</span>
+          </div>
+          <div onclick="go(23)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">22</span>
+            <span style="font-weight:500">埃塞-红樱桃</span>
+          </div>
+          <div onclick="go(27)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">26</span>
+            <span style="font-weight:500">耶加红樱桃</span>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(42,30,19,.2); padding-top:1vh">
+        <div style="font-family:var(--mono); font-size:max(11px,.82vw); letter-spacing:.16em; text-transform:uppercase; opacity:.55; margin-bottom:.8vh">洪都拉斯 · Honduras</div>
+        <div style="display:flex; flex-wrap:wrap; gap:.6vh .8vw">
+          <div onclick="go(4)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">03</span>
+            <span style="font-weight:500">雪莉</span>
+          </div>
+          <div onclick="go(8)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">07</span>
+            <span style="font-weight:500">荔枝兰</span>
+          </div>
+          <div onclick="go(19)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">18</span>
+            <span style="font-weight:500">月桂</span>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(42,30,19,.2); padding-top:1vh">
+        <div style="font-family:var(--mono); font-size:max(11px,.82vw); letter-spacing:.16em; text-transform:uppercase; opacity:.55; margin-bottom:.8vh">哥伦比亚 · Colombia</div>
+        <div style="display:flex; flex-wrap:wrap; gap:.6vh .8vw">
+          <div onclick="go(6)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">05</span>
+            <span style="font-weight:500">椰子糖</span>
+          </div>
+          <div onclick="go(7)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">06</span>
+            <span style="font-weight:500">草莓甜酒</span>
+          </div>
+          <div onclick="go(11)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">10</span>
+            <span style="font-weight:500">奇洛索</span>
+          </div>
+          <div onclick="go(12)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">11</span>
+            <span style="font-weight:500">绛紫葡萄</span>
+          </div>
+          <div onclick="go(13)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">12</span>
+            <span style="font-weight:500">哥伦比亚啤酒花</span>
+          </div>
+          <div onclick="go(24)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">23</span>
+            <span style="font-weight:500">哥伦比亚-低因</span>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(42,30,19,.2); padding-top:1vh">
+        <div style="font-family:var(--mono); font-size:max(11px,.82vw); letter-spacing:.16em; text-transform:uppercase; opacity:.55; margin-bottom:.8vh">肯尼亚 · Kenya</div>
+        <div style="display:flex; flex-wrap:wrap; gap:.6vh .8vw">
+          <div onclick="go(9)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">08</span>
+            <span style="font-weight:500">肯尼亚厌氧</span>
+          </div>
+          <div onclick="go(20)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">19</span>
+            <span style="font-weight:500">圣女果</span>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(42,30,19,.2); padding-top:1vh">
+        <div style="font-family:var(--mono); font-size:max(11px,.82vw); letter-spacing:.16em; text-transform:uppercase; opacity:.55; margin-bottom:.8vh">危地马拉 · Guatemala</div>
+        <div style="display:flex; flex-wrap:wrap; gap:.6vh .8vw">
+          <div onclick="go(15)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">14</span>
+            <span style="font-weight:500">危地马拉-奥特连</span>
+          </div>
+          <div onclick="go(21)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">20</span>
+            <span style="font-weight:500">危地马拉-蓝湖</span>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(42,30,19,.2); padding-top:1vh">
+        <div style="font-family:var(--mono); font-size:max(11px,.82vw); letter-spacing:.16em; text-transform:uppercase; opacity:.55; margin-bottom:.8vh">巴布亚新几内亚 · Papua New Guinea</div>
+        <div style="display:flex; flex-wrap:wrap; gap:.6vh .8vw">
+          <div onclick="go(17)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">16</span>
+            <span style="font-weight:500">天堂鸟AA</span>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(42,30,19,.2); padding-top:1vh">
+        <div style="font-family:var(--mono); font-size:max(11px,.82vw); letter-spacing:.16em; text-transform:uppercase; opacity:.55; margin-bottom:.8vh">印度尼西亚 · Indonesia</div>
+        <div style="display:flex; flex-wrap:wrap; gap:.6vh .8vw">
+          <div onclick="go(22)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">21</span>
+            <span style="font-weight:500">印尼-黄金曼特宁</span>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(42,30,19,.2); padding-top:1vh">
+        <div style="font-family:var(--mono); font-size:max(11px,.82vw); letter-spacing:.16em; text-transform:uppercase; opacity:.55; margin-bottom:.8vh">巴西 · Brazil</div>
+        <div style="display:flex; flex-wrap:wrap; gap:.6vh .8vw">
+          <div onclick="go(25)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">24</span>
+            <span style="font-weight:500">巴西-摩吉安娜</span>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(42,30,19,.2); padding-top:1vh">
+        <div style="font-family:var(--mono); font-size:max(11px,.82vw); letter-spacing:.16em; text-transform:uppercase; opacity:.55; margin-bottom:.8vh">卢旺达 · Rwanda</div>
+        <div style="display:flex; flex-wrap:wrap; gap:.6vh .8vw">
+          <div onclick="go(26)" style="cursor:pointer; padding:.6vh 1vw; border-radius:4px; background:rgba(42,30,19,.04); border:1px solid rgba(42,30,19,.08); font-family:var(--sans-zh); font-size:max(12px,.95vw); display:flex; align-items:center; gap:.6vw; transition:all .2s; white-space:nowrap"
+               onmouseover="this.style.background='rgba(42,30,19,.1)';this.style.transform='translateX(3px)'"
+               onmouseout="this.style.background='rgba(42,30,19,.04)';this.style.transform='none'">
+            <span style="font-family:var(--mono); font-size:.85em; opacity:.45">25</span>
+            <span style="font-weight:500">卢旺达-水洗</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:1.5vh; text-align:center; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.18em; text-transform:uppercase; opacity:.45; padding-bottom:1vh">
+      点击任意豆子跳转 · 左右键翻页 · ESC 索引
+    </div>
+  </div>
+  <div class="foot">
+    <div>喜欢拍照的咖啡师</div>
+    <div>咖啡豆单 · 2026</div>
+  </div>
+</section>
+
+
+<!-- Slide 2: 卡门瑰夏 -->
+<section class="slide light" id="slide-1">
+  <div class="chrome"><div>巴拿马 · Panama</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>01 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -509,11 +736,8 @@
   </div>
 </section>
 <!-- Slide 3: 桃乐茜 -->
-<section class="slide dark">
-  <div class="chrome">
-    <div>埃塞俄比亚 · Ethiopia</div>
-    <div>02 / 26</div>
-  </div>
+<section class="slide dark" id="slide-2">
+  <div class="chrome"><div>埃塞俄比亚 · Ethiopia</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>02 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -541,11 +765,8 @@
   </div>
 </section>
 <!-- Slide 4: 雪莉 -->
-<section class="slide light">
-  <div class="chrome">
-    <div>洪都拉斯 · Honduras</div>
-    <div>03 / 26</div>
-  </div>
+<section class="slide light" id="slide-3">
+  <div class="chrome"><div>洪都拉斯 · Honduras</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>03 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -573,11 +794,8 @@
   </div>
 </section>
 <!-- Slide 5: 花魁 -->
-<section class="slide dark">
-  <div class="chrome">
-    <div>埃塞俄比亚 · Ethiopia</div>
-    <div>04 / 26</div>
-  </div>
+<section class="slide dark" id="slide-4">
+  <div class="chrome"><div>埃塞俄比亚 · Ethiopia</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>04 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -605,11 +823,8 @@
   </div>
 </section>
 <!-- Slide 6: 椰子糖 -->
-<section class="slide light">
-  <div class="chrome">
-    <div>哥伦比亚 · Colombia</div>
-    <div>05 / 26</div>
-  </div>
+<section class="slide light" id="slide-5">
+  <div class="chrome"><div>哥伦比亚 · Colombia</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>05 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -637,11 +852,8 @@
   </div>
 </section>
 <!-- Slide 7: 草莓甜酒 -->
-<section class="slide dark">
-  <div class="chrome">
-    <div>哥伦比亚 · Colombia</div>
-    <div>06 / 26</div>
-  </div>
+<section class="slide dark" id="slide-6">
+  <div class="chrome"><div>哥伦比亚 · Colombia</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>06 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -669,11 +881,8 @@
   </div>
 </section>
 <!-- Slide 8: 荔枝兰 -->
-<section class="slide light">
-  <div class="chrome">
-    <div>洪都拉斯 · Honduras</div>
-    <div>07 / 26</div>
-  </div>
+<section class="slide light" id="slide-7">
+  <div class="chrome"><div>洪都拉斯 · Honduras</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>07 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -701,11 +910,8 @@
   </div>
 </section>
 <!-- Slide 9: 肯尼亚厌氧 -->
-<section class="slide dark">
-  <div class="chrome">
-    <div>肯尼亚 · Kenya</div>
-    <div>08 / 26</div>
-  </div>
+<section class="slide dark" id="slide-8">
+  <div class="chrome"><div>肯尼亚 · Kenya</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>08 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -733,11 +939,8 @@
   </div>
 </section>
 <!-- Slide 10: 柑橘茉莉 -->
-<section class="slide light">
-  <div class="chrome">
-    <div>埃塞俄比亚 · Ethiopia</div>
-    <div>09 / 26</div>
-  </div>
+<section class="slide light" id="slide-9">
+  <div class="chrome"><div>埃塞俄比亚 · Ethiopia</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>09 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -765,11 +968,8 @@
   </div>
 </section>
 <!-- Slide 11: 奇洛索 -->
-<section class="slide dark">
-  <div class="chrome">
-    <div>哥伦比亚 · Colombia</div>
-    <div>10 / 26</div>
-  </div>
+<section class="slide dark" id="slide-10">
+  <div class="chrome"><div>哥伦比亚 · Colombia</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>10 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -797,11 +997,8 @@
   </div>
 </section>
 <!-- Slide 12: 绛紫葡萄 -->
-<section class="slide light">
-  <div class="chrome">
-    <div>哥伦比亚 · Colombia</div>
-    <div>11 / 26</div>
-  </div>
+<section class="slide light" id="slide-11">
+  <div class="chrome"><div>哥伦比亚 · Colombia</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>11 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -829,11 +1026,8 @@
   </div>
 </section>
 <!-- Slide 13: 哥伦比亚啤酒花 -->
-<section class="slide dark">
-  <div class="chrome">
-    <div>哥伦比亚 · Colombia</div>
-    <div>12 / 26</div>
-  </div>
+<section class="slide dark" id="slide-12">
+  <div class="chrome"><div>哥伦比亚 · Colombia</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>12 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -861,11 +1055,8 @@
   </div>
 </section>
 <!-- Slide 14: 巴拿马-马拉哥吉佩 -->
-<section class="slide light">
-  <div class="chrome">
-    <div>巴拿马 · Panama</div>
-    <div>13 / 26</div>
-  </div>
+<section class="slide light" id="slide-13">
+  <div class="chrome"><div>巴拿马 · Panama</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>13 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -893,11 +1084,8 @@
   </div>
 </section>
 <!-- Slide 15: 危地马拉-奥特连 -->
-<section class="slide dark">
-  <div class="chrome">
-    <div>危地马拉 · Guatemala</div>
-    <div>14 / 26</div>
-  </div>
+<section class="slide dark" id="slide-14">
+  <div class="chrome"><div>危地马拉 · Guatemala</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>14 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -925,11 +1113,8 @@
   </div>
 </section>
 <!-- Slide 16: 瑰夏村 -->
-<section class="slide light">
-  <div class="chrome">
-    <div>埃塞俄比亚 · Ethiopia</div>
-    <div>15 / 26</div>
-  </div>
+<section class="slide light" id="slide-15">
+  <div class="chrome"><div>埃塞俄比亚 · Ethiopia</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>15 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -957,11 +1142,8 @@
   </div>
 </section>
 <!-- Slide 17: 天堂鸟AA -->
-<section class="slide dark">
-  <div class="chrome">
-    <div>巴布亚新几内亚 · Papua New Guinea</div>
-    <div>16 / 26</div>
-  </div>
+<section class="slide dark" id="slide-16">
+  <div class="chrome"><div>巴布亚新几内亚 · Papua New Guinea</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>16 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -989,11 +1171,8 @@
   </div>
 </section>
 <!-- Slide 18: 神秘农场 -->
-<section class="slide light">
-  <div class="chrome">
-    <div>埃塞俄比亚 · Ethiopia</div>
-    <div>17 / 26</div>
-  </div>
+<section class="slide light" id="slide-17">
+  <div class="chrome"><div>埃塞俄比亚 · Ethiopia</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>17 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -1021,11 +1200,8 @@
   </div>
 </section>
 <!-- Slide 19: 月桂 -->
-<section class="slide dark">
-  <div class="chrome">
-    <div>洪都拉斯 · Honduras</div>
-    <div>18 / 26</div>
-  </div>
+<section class="slide dark" id="slide-18">
+  <div class="chrome"><div>洪都拉斯 · Honduras</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>18 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -1053,11 +1229,8 @@
   </div>
 </section>
 <!-- Slide 20: 圣女果 -->
-<section class="slide light">
-  <div class="chrome">
-    <div>肯尼亚 · Kenya</div>
-    <div>19 / 26</div>
-  </div>
+<section class="slide light" id="slide-19">
+  <div class="chrome"><div>肯尼亚 · Kenya</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>19 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -1085,11 +1258,8 @@
   </div>
 </section>
 <!-- Slide 21: 危地马拉-蓝湖 -->
-<section class="slide dark">
-  <div class="chrome">
-    <div>危地马拉 · Guatemala</div>
-    <div>20 / 26</div>
-  </div>
+<section class="slide dark" id="slide-20">
+  <div class="chrome"><div>危地马拉 · Guatemala</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>20 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -1117,11 +1287,8 @@
   </div>
 </section>
 <!-- Slide 22: 印尼-黄金曼特宁 -->
-<section class="slide light">
-  <div class="chrome">
-    <div>印度尼西亚 · Indonesia</div>
-    <div>21 / 26</div>
-  </div>
+<section class="slide light" id="slide-21">
+  <div class="chrome"><div>印度尼西亚 · Indonesia</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>21 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -1149,11 +1316,8 @@
   </div>
 </section>
 <!-- Slide 23: 埃塞-红樱桃 -->
-<section class="slide dark">
-  <div class="chrome">
-    <div>埃塞俄比亚 · Ethiopia</div>
-    <div>22 / 26</div>
-  </div>
+<section class="slide dark" id="slide-22">
+  <div class="chrome"><div>埃塞俄比亚 · Ethiopia</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>22 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -1181,11 +1345,8 @@
   </div>
 </section>
 <!-- Slide 24: 哥伦比亚-低因 -->
-<section class="slide light">
-  <div class="chrome">
-    <div>哥伦比亚 · Colombia</div>
-    <div>23 / 26</div>
-  </div>
+<section class="slide light" id="slide-23">
+  <div class="chrome"><div>哥伦比亚 · Colombia</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>23 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -1213,11 +1374,8 @@
   </div>
 </section>
 <!-- Slide 25: 巴西-摩吉安娜 -->
-<section class="slide dark">
-  <div class="chrome">
-    <div>巴西 · Brazil</div>
-    <div>24 / 26</div>
-  </div>
+<section class="slide dark" id="slide-24">
+  <div class="chrome"><div>巴西 · Brazil</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>24 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -1245,11 +1403,8 @@
   </div>
 </section>
 <!-- Slide 26: 卢旺达-水洗 -->
-<section class="slide light">
-  <div class="chrome">
-    <div>卢旺达 · Rwanda</div>
-    <div>25 / 26</div>
-  </div>
+<section class="slide light" id="slide-25">
+  <div class="chrome"><div>卢旺达 · Rwanda</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>25 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -1277,11 +1432,8 @@
   </div>
 </section>
 <!-- Slide 27: 耶加红樱桃 -->
-<section class="slide dark">
-  <div class="chrome">
-    <div>埃塞俄比亚 · Ethiopia</div>
-    <div>26 / 26</div>
-  </div>
+<section class="slide dark" id="slide-26">
+  <div class="chrome"><div>埃塞俄比亚 · Ethiopia</div><div onclick="go(1)" style="cursor:pointer; padding:6px 14px; border:1px solid currentColor; border-radius:4px; opacity:.6; transition:all .2s; font-family:var(--mono); font-size:max(10px,.78vw); letter-spacing:.14em; text-transform:uppercase" onmouseover="this.style.opacity=1;this.style.background='rgba(127,127,127,.15)'" onmouseout="this.style.opacity=.6;this.style.background='transparent'">目录</div><div>26 / 26</div></div>
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex; flex-direction:column; justify-content:space-between; gap:3vh">
       <div>
@@ -1309,7 +1461,7 @@
   </div>
 </section>
 <!-- Slide 28: 尾页 -->
-<section class="slide hero dark">
+<section class="slide hero dark" id="slide-27">
   <div class="chrome">
     <div>联系 · Contact</div>
     <div>— · —</div>
